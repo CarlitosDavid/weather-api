@@ -1,26 +1,18 @@
-<html>
-<head>
-<title>Weather</title>
-    <meta charset="utf-8">
 
-	<section class="top-banner">
-		<div class="container">
-		  <h1 class="heading">Simple Weather App</h1>
-		  <form>
-			<input type="text" placeholder="Search for a city" autofocus>
-			<button type="submit">SUBMIT</button>
-			<span class="msg"></span>
-		  </form>
-		</div>
-	  </section>
-	  <section class="ajax-section">
-		<div class="container">
-		  <ul class="cities"></ul>
-		</div>
-	  </section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <title>Weather App</title>
+  </head>
 
-    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
-    <script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
-	<script src="assets/call.js"></script>
-</body>
+  <body>
+    <h1 id="temperature"></h1>
+    <h2 id="description"></h2>
+    <p id="location"></p>
+  </body>
+
+  <script src="assets/call.js"></script>
 </html>
