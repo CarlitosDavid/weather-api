@@ -6,9 +6,10 @@
 ## application
     uses Html, CSS, and javascript. 
     server-side api to call weather on a city input 
-    
+
     
 ## API
+    weather api key from https://www.weatherapi.com/my/
    
 
 

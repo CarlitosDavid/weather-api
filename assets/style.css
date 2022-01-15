@@ -26,10 +26,11 @@ body {
 button {
     color: blue;
     outline: white;
-    width: 20px;
-    height: 20px;
-    margin: 0.5em;
+    border-radius: inherit;
+    text-align: inherit;
+    padding: auto;
 }
+
 
 input.serach-bar {
     padding: 0.5em 1em;
@@ -40,13 +41,13 @@ input.serach-bar {
     outline: none;
 }
 
-.weather {
+.weather.loading {
     visibility: hidden;
     max-height: 20px;
     position: relative;
 }
 
-.weather::after {
+.weather.loading:after {
     visibility: visible;
     content: "Loading...";
     color: white;
@@ -58,6 +59,11 @@ input.serach-bar {
 h1.temp {
     margin: 0;
     margin-bottom: 0.5em;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
 }
 
 .flex {
