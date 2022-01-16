@@ -2,12 +2,10 @@
 let weather = {
     apiKey: "270b7d76f8eb42d78fe93256221501",
     fetchWeather: function (city) {
-        fetch("http://api.weatherapi.com/v1/current.json?key=270b7d76f8eb42d78fe93256221501&q="
-        + city +
-        + this.apiKey
+        fetch("http://api.weatherapi.com/v1/current.json?key=270b7d76f8eb42d78fe93256221501&q=" + city + apiKey
         ) 
-        // .then((response) => response.json())
-        // .then((data) => console.log(data));
+        .then((response) => response.json())
+         .then((data) => console.log(data));
         .then((response) => {
             if (!response.ok) {
                 alert("location not found.");
@@ -21,13 +19,13 @@ let weather = {
         const { name } = data;
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
-        const { description } = data.weather[0];
 
-        document.querySelector(".city").innerText = "Weather in" + name;
-        document.querySelector(".temp").innerText = temp + "°F";
-        document.querySelector("humidity").innerText = 
+
+        document.querySelector(".city").innerHTML = "Weather in" + name;
+        document.querySelector(".temp").innerHTML = temp + "°F";
+        document.querySelector("humidity").innerHTML = 
         "Humidity:" + humidity + "%";
-        document.querySelector(".wind").innerText = "Wind speed:" + speed + "km/h";
+        document.querySelector(".wind").innerHTML = "Wind speed:" + speed + "km/h";
         document.querySelector(".weather").classList.remove("loading");
 
 
@@ -37,14 +35,13 @@ let weather = {
     },
 };
 
-document.querySelector("button").addEventListener("click", function () {
+addEventListener("click") {
     weather.search();
-});
+}
 
-document.querySelector(".search-bar").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
+addEventListene(function (event) {
+    if (event.key == "Confirm") {
         weather.search();
     }
-});
+})
 
-weather.fetchWeather("Austin");
